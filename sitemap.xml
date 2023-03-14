@@ -1,317 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Benchmark/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Benchmark/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/BenchmarkResult/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/BenchmarkResult/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Boolean/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Boolean/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/ComputeResource/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/ComputeResource/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Contributor/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Contributor/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Dataset/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Date/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/DatasetCollection/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/DateOrDatetime/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Date/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Datetime/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/DateOrDatetime/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Decimal/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Datetime/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Double/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Decimal/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/File/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Double/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Float/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/File/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Integer/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Float/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Ncname/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Integer/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Nodeidentifier/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/NamedThing/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Objectidentifier/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Ncname/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Results/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Nodeidentifier/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Software/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Objectidentifier/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/SourceCode/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/PersonStatus/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/String/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Results/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Time/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Software/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Uri/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/SourceCode/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/Uriorcurie/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/String/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/about/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Time/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/affiliation/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Uri/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/architecture/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/Uriorcurie/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/benchmark/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/about/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/columns/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/affiliation/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/contributors/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/age_in_years/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/cores/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/architecture/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/data_raw/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/benchmark/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/data_table/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/birth_date/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/data_visualization/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/columns/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/date_created/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/contributors/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/download/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/cores/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/email/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/data_raw/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/format/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/data_table/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/framework/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/data_visualization/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/handle/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/date/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/hardware/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/description/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/id/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/download/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/implementation/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/email/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/memory_in_KB/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/entries/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/name/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/format/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/nodes/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/framework/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/number/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/handle/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/pfhub-schema/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/hardware/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/repository/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/id/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/results/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/implementation/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/summary/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/memory_in_KB/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/time_in_s/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/name/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/nodes/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/number/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/pfhub-schema/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/primary_email/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/repository/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/results/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/summary/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/time_in_s/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/version/</loc>
-         <lastmod>2023-03-14</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://usnistgov.github.io/pfhub-schema/vital_status/</loc>
+         <loc>https://tkphd.github.io/pfhub-schema/version/</loc>
          <lastmod>2023-03-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
