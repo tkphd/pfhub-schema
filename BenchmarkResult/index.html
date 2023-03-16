@@ -195,12 +195,28 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-benchmarkresult">Class: BenchmarkResult</h1>
-<p><em>Container for this Benchmark Problem solution.</em></p>
+<p><em>Root and context for this Benchmark Problem solution.</em></p>
 <p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/BenchmarkResult">pfhub:BenchmarkResult</a></p>
 <div class="mermaid"> classDiagram
     class BenchmarkResult
-      BenchmarkResult : datasets
-        BenchmarkResult &lt;.. Dataset : datasets
+      BenchmarkResult : benchmark
+        BenchmarkResult &lt;.. Benchmark : benchmark
+      BenchmarkResult : contributors
+        BenchmarkResult &lt;.. Contributor : contributors
+      BenchmarkResult : date_created
+        BenchmarkResult &lt;.. date : date_created
+      BenchmarkResult : framework
+        BenchmarkResult &lt;.. Software : framework
+      BenchmarkResult : id
+        BenchmarkResult &lt;.. uriorcurie : id
+      BenchmarkResult : implementation
+        BenchmarkResult &lt;.. SourceCode : implementation
+      BenchmarkResult : name
+        BenchmarkResult &lt;.. string : name
+      BenchmarkResult : results
+        BenchmarkResult &lt;.. Results : results
+      BenchmarkResult : summary
+        BenchmarkResult &lt;.. string : summary
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -216,9 +232,57 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../datasets/">datasets</a></td>
-<td>0..* <br/> <a href="../Dataset/">Dataset</a></td>
-<td>Container for a simulation result</td>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>Unique identifier that must not collide with any other</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Informal or human-memorable identifier that may collide with others</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../benchmark/">benchmark</a></td>
+<td>0..1 <br/> <a href="../Benchmark/">Benchmark</a></td>
+<td>Details of the Benchmark Problem</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../contributors/">contributors</a></td>
+<td>0..* <br/> <a href="../Contributor/">Contributor</a></td>
+<td>Collection of people who worked on this solution</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../date_created/">date_created</a></td>
+<td>0..1 <br/> <a href="../Date/">Date</a></td>
+<td>Day when an item was uploaded, released, or published</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../framework/">framework</a></td>
+<td>0..* <br/> <a href="../Software/">Software</a></td>
+<td>A computer program or library</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../implementation/">implementation</a></td>
+<td>0..1 <br/> <a href="../SourceCode/">SourceCode</a></td>
+<td>Source code implementing the solution</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../results/">results</a></td>
+<td>0..1 <br/> <a href="../Results/">Results</a></td>
+<td>Collection of outputs and summary data from a simulation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../summary/">summary</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Text description, abstract, or narrative</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -252,36 +316,147 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: BenchmarkResult
-description: Container for this Benchmark Problem solution.
+description: Root and context for this Benchmark Problem solution.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
-- datasets
-tree_root: true
+- id
+- name
+- benchmark
+- contributors
+- date_created
+- framework
+- implementation
+- results
+- summary
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: BenchmarkResult
-description: Container for this Benchmark Problem solution.
+description: Root and context for this Benchmark Problem solution.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 attributes:
-  datasets:
-    name: datasets
-    description: Container for a simulation result.
+  id:
+    name: id
+    description: Unique identifier that must not collide with any other.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    multivalued: true
-    alias: datasets
+    slot_uri: schema:identifier
+    multivalued: false
+    identifier: true
+    alias: id
+    owner: BenchmarkResult
+    domain_of:
+    - Benchmark
+    - Contributor
+    - File
+    - Software
+    - SourceCode
+    - BenchmarkResult
+    range: uriorcurie
+    required: true
+  name:
+    name: name
+    description: Informal or human-memorable identifier that may collide with others.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: schema:name
+    multivalued: false
+    alias: name
+    owner: BenchmarkResult
+    domain_of:
+    - Benchmark
+    - Contributor
+    - File
+    - Software
+    - SourceCode
+    - BenchmarkResult
+    range: string
+  benchmark:
+    name: benchmark
+    description: Details of the Benchmark Problem.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    alias: benchmark
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
-    range: Dataset
+    range: Benchmark
+  contributors:
+    name: contributors
+    description: Collection of people who worked on this solution.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: schema:contributor
+    multivalued: true
+    alias: contributors
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: Contributor
     inlined: true
     inlined_as_list: true
-tree_root: true
+  date_created:
+    name: date_created
+    description: Day when an item was uploaded, released, or published.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: schema:dateCreated
+    alias: date_created
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: date
+  framework:
+    name: framework
+    description: A computer program or library
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: schema:SoftwareApplication
+    multivalued: true
+    alias: framework
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: Software
+    inlined: true
+    inlined_as_list: true
+  implementation:
+    name: implementation
+    description: Source code implementing the solution.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    alias: implementation
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: SourceCode
+  results:
+    name: results
+    description: Collection of outputs and summary data from a simulation.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: false
+    alias: results
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: Results
+  summary:
+    name: summary
+    description: Text description, abstract, or narrative.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: schema:abstract
+    multivalued: false
+    alias: summary
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: string
 
 </code></pre>
 </details>
