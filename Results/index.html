@@ -204,18 +204,18 @@
 <p>URI: <a href="http://schema.org/Dataset">schema:Dataset</a></p>
 <div class="mermaid"> classDiagram
     class Results
-      Results : data_raw
-        Results &lt;.. File : data_raw
-      Results : data_table
-        Results &lt;.. File : data_table
-      Results : data_visualization
-        Results &lt;.. File : data_visualization
+      Results : csv_data
+        Results &lt;.. File : csv_data
       Results : hardware
         Results &lt;.. ComputeResource : hardware
-      Results : memory_in_KB
-        Results &lt;.. integer : memory_in_KB
+      Results : memory_in_kb
+        Results &lt;.. integer : memory_in_kb
+      Results : raw_data
+        Results &lt;.. File : raw_data
       Results : time_in_s
         Results &lt;.. integer : time_in_s
+      Results : viz_data
+        Results &lt;.. File : viz_data
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -231,19 +231,19 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../data_raw/">data_raw</a></td>
-<td>0..* <br/> <a href="../File/">File</a></td>
-<td>Raw data output from a simulation</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../data_table/">data_table</a></td>
+<td><a href="../csv_data/">csv_data</a></td>
 <td>1..* <br/> <a href="../File/">File</a></td>
 <td>Tabular output from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../data_visualization/">data_visualization</a></td>
+<td><a href="../raw_data/">raw_data</a></td>
+<td>0..* <br/> <a href="../File/">File</a></td>
+<td>Raw data output from a simulation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../viz_data/">viz_data</a></td>
 <td>0..* <br/> <a href="../File/">File</a></td>
 <td>Visualization output from a simulation</td>
 <td>direct</td>
@@ -255,7 +255,7 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../memory_in_KB/">memory_in_KB</a></td>
+<td><a href="../memory_in_kb/">memory_in_kb</a></td>
 <td>0..1 <br/> <a href="../Integer/">Integer</a></td>
 <td>Memory capacity required for this simulation</td>
 <td>direct</td>
@@ -280,7 +280,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../results/">results</a></td>
 <td>range</td>
 <td><a href="./">Results</a></td>
@@ -320,11 +320,11 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
-- data_raw
-- data_table
-- data_visualization
+- csv_data
+- raw_data
+- viz_data
 - hardware
-- memory_in_KB
+- memory_in_kb
 - time_in_s
 class_uri: schema:Dataset
 
@@ -337,26 +337,13 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 attributes:
-  data_raw:
-    name: data_raw
-    description: Raw data output from a simulation.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    multivalued: true
-    alias: data_raw
-    owner: Results
-    domain_of:
-    - Results
-    range: File
-    inlined: true
-    inlined_as_list: true
-  data_table:
-    name: data_table
+  csv_data:
+    name: csv_data
     description: Tabular output from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
-    alias: data_table
+    alias: csv_data
     owner: Results
     domain_of:
     - Results
@@ -364,13 +351,26 @@ attributes:
     required: true
     inlined: true
     inlined_as_list: true
-  data_visualization:
-    name: data_visualization
+  raw_data:
+    name: raw_data
+    description: Raw data output from a simulation.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: true
+    alias: raw_data
+    owner: Results
+    domain_of:
+    - Results
+    range: File
+    inlined: true
+    inlined_as_list: true
+  viz_data:
+    name: viz_data
     description: Visualization output from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
-    alias: data_visualization
+    alias: viz_data
     owner: Results
     domain_of:
     - Results
@@ -388,12 +388,12 @@ attributes:
     domain_of:
     - Results
     range: ComputeResource
-  memory_in_KB:
-    name: memory_in_KB
+  memory_in_kb:
+    name: memory_in_kb
     description: Memory capacity required for this simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    alias: memory_in_KB
+    alias: memory_in_kb
     owner: Results
     domain_of:
     - Results

@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/memory_in_KB/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/datasets/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: memory_in_KB - pfhub-schema</title>
+        <title>Slot: datasets - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-memory_in_kb" class="md-skip">
+        <a href="#slot-datasets" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: memory_in_KB
+              Slot: datasets
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/memory_in_KB.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/datasets.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-memory_in_kb">Slot: memory_in_KB</h1>
-<p><em>Memory capacity required for this simulation.</em></p>
-<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/memory_in_KB">pfhub:memory_in_KB</a></p>
+<h1 id="slot-datasets">Slot: datasets</h1>
+<p><em>Container for a simulation result.</em></p>
+<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/datasets">pfhub:datasets</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Results/">Results</a></td>
-<td>Runtime information and output from a simulation</td>
+<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td>Container for this Benchmark Problem solution</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../Integer/">Integer</a></li>
+<li>Range: <a href="../Dataset/">Dataset</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,17 +349,17 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: memory_in_KB
-description: Memory capacity required for this simulation.
+<pre><code class="language-yaml">name: datasets
+description: Container for a simulation result.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-alias: memory_in_KB
+multivalued: true
+alias: datasets
 domain_of:
-- Results
-range: integer
-unit:
-  ucum_code: KIB*BY
-  has_quantity_kind: UO:0000245
+- BenchmarkResult
+range: Dataset
+inlined: true
+inlined_as_list: true
 
 </code></pre>
 

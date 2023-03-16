@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pfhub-schema" class="md-skip">
+        <a href="#pfhub-benchmark-results" class="md-skip">
           Skip to content
         </a>
       
@@ -379,10 +379,10 @@
   </a>
 
 
-<h1 id="pfhub-schema">pfhub-schema</h1>
-<p>Phase-field simulation and benchmark schema in LinkML.</p>
+<h1 id="pfhub-benchmark-results">PFHub Benchmark Results</h1>
+<p>Schema for Phase-field Simulation and Benchmark Results schema in LinkML.</p>
 <p>URI: https://w3id.org/usnistgov/pfhub-schema
-Name: pfhub-schema</p>
+Name: pfhub_schema</p>
 <h2 id="classes">Classes</h2>
 <table>
 <thead>
@@ -398,7 +398,7 @@ Name: pfhub-schema</p>
 </tr>
 <tr>
 <td><a href="BenchmarkResult/">BenchmarkResult</a></td>
-<td>Root and context for this Benchmark Problem solution</td>
+<td>Container for this Benchmark Problem solution</td>
 </tr>
 <tr>
 <td><a href="ComputeResource/">ComputeResource</a></td>
@@ -407,6 +407,10 @@ Name: pfhub-schema</p>
 <tr>
 <td><a href="Contributor/">Contributor</a></td>
 <td>Someone who contributed to this solution</td>
+</tr>
+<tr>
+<td><a href="Dataset/">Dataset</a></td>
+<td>Root and context for this Benchmark Problem solution</td>
 </tr>
 <tr>
 <td><a href="File/">File</a></td>
@@ -460,16 +464,12 @@ Name: pfhub-schema</p>
 <td>Number of parallel cores or threads of execution used by the simulation on a ...</td>
 </tr>
 <tr>
-<td><a href="data_raw/">data_raw</a></td>
-<td>Raw data output from a simulation</td>
-</tr>
-<tr>
-<td><a href="data_table/">data_table</a></td>
+<td><a href="csv_data/">csv_data</a></td>
 <td>Tabular output from a simulation</td>
 </tr>
 <tr>
-<td><a href="data_visualization/">data_visualization</a></td>
-<td>Visualization output from a simulation</td>
+<td><a href="datasets/">datasets</a></td>
+<td>Container for a simulation result</td>
 </tr>
 <tr>
 <td><a href="date_created/">date_created</a></td>
@@ -508,7 +508,7 @@ Name: pfhub-schema</p>
 <td>Source code implementing the solution</td>
 </tr>
 <tr>
-<td><a href="memory_in_KB/">memory_in_KB</a></td>
+<td><a href="memory_in_kb/">memory_in_kb</a></td>
 <td>Memory capacity required for this simulation</td>
 </tr>
 <tr>
@@ -520,8 +520,8 @@ Name: pfhub-schema</p>
 <td>Number of machines allocated for the simulation in a computer cluster environ...</td>
 </tr>
 <tr>
-<td><a href="number/">number</a></td>
-<td>Alphanumerical identifier for part of a Benchmark Problem</td>
+<td><a href="raw_data/">raw_data</a></td>
+<td>Raw data output from a simulation</td>
 </tr>
 <tr>
 <td><a href="repository/">repository</a></td>
@@ -542,6 +542,10 @@ Name: pfhub-schema</p>
 <tr>
 <td><a href="version/">version</a></td>
 <td>Semantic version of a software project</td>
+</tr>
+<tr>
+<td><a href="viz_data/">viz_data</a></td>
+<td>Visualization output from a simulation</td>
 </tr>
 </tbody>
 </table>

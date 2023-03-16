@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/summary/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/raw_data/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: summary - pfhub-schema</title>
+        <title>Slot: raw_data - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-summary" class="md-skip">
+        <a href="#slot-raw_data" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: summary
+              Slot: raw_data
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/summary.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/raw_data.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-summary">Slot: summary</h1>
-<p><em>Text description, abstract, or narrative.</em></p>
-<p>URI: <a href="http://schema.org/abstract">schema:abstract</a></p>
+<h1 id="slot-raw_data">Slot: raw_data</h1>
+<p><em>Raw data output from a simulation.</em></p>
+<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/raw_data">pfhub:raw_data</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,15 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Dataset/">Dataset</a></td>
-<td>Root and context for this Benchmark Problem solution</td>
+<td><a href="../Results/">Results</a></td>
+<td>Runtime information and output from a simulation</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../File/">File</a></li>
+<li>Multivalued: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,16 +349,17 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: summary
-description: Text description, abstract, or narrative.
+<pre><code class="language-yaml">name: raw_data
+description: Raw data output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-slot_uri: schema:abstract
-multivalued: false
-alias: summary
+multivalued: true
+alias: raw_data
 domain_of:
-- Dataset
-range: string
+- Results
+range: File
+inlined: true
+inlined_as_list: true
 
 </code></pre>
 

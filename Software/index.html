@@ -254,7 +254,7 @@
 </tr>
 <tr>
 <td><a href="../version/">version</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>Semantic version of a software project</td>
 <td>direct</td>
 </tr>
@@ -272,7 +272,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../framework/">framework</a></td>
 <td>range</td>
 <td><a href="./">Software</a></td>
@@ -339,7 +339,7 @@ attributes:
     alias: id
     owner: Software
     domain_of:
-    - BenchmarkResult
+    - Dataset
     - Benchmark
     - Contributor
     - File
@@ -357,7 +357,7 @@ attributes:
     alias: name
     owner: Software
     domain_of:
-    - BenchmarkResult
+    - Dataset
     - Benchmark
     - Contributor
     - File
@@ -399,6 +399,8 @@ attributes:
     - Benchmark
     - Software
     range: string
+    recommended: true
+    pattern: ^[\d+\.]+
 class_uri: schema:SoftwareApplication
 
 </code></pre>

@@ -208,8 +208,6 @@
         Benchmark &lt;.. uriorcurie : id
       Benchmark : name
         Benchmark &lt;.. string : name
-      Benchmark : number
-        Benchmark &lt;.. string : number
       Benchmark : version
         Benchmark &lt;.. string : version
 
@@ -239,14 +237,8 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../number/">number</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Alphanumerical identifier for part of a Benchmark Problem</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../version/">version</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <em>recommended</em> <br/> <a href="../String/">String</a></td>
 <td>Semantic version of a software project</td>
 <td>direct</td>
 </tr>
@@ -264,7 +256,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td><a href="../Dataset/">Dataset</a></td>
 <td><a href="../benchmark/">benchmark</a></td>
 <td>range</td>
 <td><a href="./">Benchmark</a></td>
@@ -306,8 +298,23 @@ rank: 1000
 slots:
 - id
 - name
-- number
 - version
+slot_usage:
+  name:
+    name: name
+    description: Alphanumerical identifier for part of a Benchmark Problem.
+    slot_uri: schema:version
+    multivalued: false
+    domain_of:
+    - Dataset
+    - Benchmark
+    - Contributor
+    - File
+    - Software
+    - SourceCode
+    range: string
+    required: true
+    pattern: ^\d\a
 
 </code></pre>
 </details>
@@ -317,6 +324,22 @@ slots:
 description: Information about the specific Benchmark solved.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
+slot_usage:
+  name:
+    name: name
+    description: Alphanumerical identifier for part of a Benchmark Problem.
+    slot_uri: schema:version
+    multivalued: false
+    domain_of:
+    - Dataset
+    - Benchmark
+    - Contributor
+    - File
+    - Software
+    - SourceCode
+    range: string
+    required: true
+    pattern: ^\d\a
 attributes:
   id:
     name: id
@@ -329,7 +352,7 @@ attributes:
     alias: id
     owner: Benchmark
     domain_of:
-    - BenchmarkResult
+    - Dataset
     - Benchmark
     - Contributor
     - File
@@ -339,34 +362,23 @@ attributes:
     required: true
   name:
     name: name
-    description: Informal or human-memorable identifier that may collide with others.
+    description: Alphanumerical identifier for part of a Benchmark Problem.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:name
+    slot_uri: schema:version
     multivalued: false
     alias: name
     owner: Benchmark
     domain_of:
-    - BenchmarkResult
+    - Dataset
     - Benchmark
     - Contributor
     - File
     - Software
     - SourceCode
     range: string
-  number:
-    name: number
-    description: Alphanumerical identifier for part of a Benchmark Problem.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: schema:identifier
-    multivalued: false
-    alias: number
-    owner: Benchmark
-    domain_of:
-    - Benchmark
-    range: string
-    pattern: ^\a\d
+    required: true
+    pattern: ^\d\a
   version:
     name: version
     description: Semantic version of a software project.
@@ -379,6 +391,8 @@ attributes:
     - Benchmark
     - Software
     range: string
+    recommended: true
+    pattern: ^[\d+\.]+
 
 </code></pre>
 </details>
