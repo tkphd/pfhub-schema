@@ -318,7 +318,7 @@
 
 <h1 id="slot-id">Slot: id</h1>
 <p><em>Unique identifier that must not collide with any other.</em></p>
-<p>URI: <a href="http://schema.org/identifier">schema:identifier</a></p>
+<p>URI: <a href="https://schema.org/identifier">https://schema.org/identifier</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,28 +331,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../Benchmark/">Benchmark</a></td>
-<td>Information about the specific Benchmark solved</td>
+<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td>Root and context for this Benchmark Problem solution</td>
 </tr>
 <tr>
 <td><a href="../Contributor/">Contributor</a></td>
 <td>Someone who contributed to this solution</td>
-</tr>
-<tr>
-<td><a href="../File/">File</a></td>
-<td>A generic electronic information container</td>
-</tr>
-<tr>
-<td><a href="../Software/">Software</a></td>
-<td>A software product, download, or repository</td>
-</tr>
-<tr>
-<td><a href="../SourceCode/">SourceCode</a></td>
-<td>Link to the authors' implementation of the benchmark problem</td>
-</tr>
-<tr>
-<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
-<td>Root and context for this Benchmark Problem solution</td>
 </tr>
 </tbody>
 </table>
@@ -373,17 +357,13 @@
 description: Unique identifier that must not collide with any other.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-slot_uri: schema:identifier
+slot_uri: https://schema.org/identifier
 multivalued: false
 identifier: true
 alias: id
 domain_of:
-- Benchmark
-- Contributor
-- File
-- Software
-- SourceCode
 - BenchmarkResult
+- Contributor
 range: uriorcurie
 required: true
 

@@ -201,21 +201,21 @@
 </a>
 <h1 id="class-results">Class: Results</h1>
 <p><em>Runtime information and output from a simulation.</em></p>
-<p>URI: <a href="http://schema.org/Dataset">schema:Dataset</a></p>
+<p>URI: <a href="https://schema.org/Dataset">https://schema.org/Dataset</a></p>
 <div class="mermaid"> classDiagram
     class Results
       Results : csv_data
-        Results &lt;.. File : csv_data
+        Results &lt;.. CsvFile : csv_data
       Results : hardware
         Results &lt;.. ComputeResource : hardware
       Results : memory_in_kb
         Results &lt;.. integer : memory_in_kb
       Results : raw_data
-        Results &lt;.. File : raw_data
+        Results &lt;.. DataFile : raw_data
       Results : time_in_s
         Results &lt;.. integer : time_in_s
       Results : viz_data
-        Results &lt;.. File : viz_data
+        Results &lt;.. VisualizationFile : viz_data
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -232,19 +232,19 @@
 <tbody>
 <tr>
 <td><a href="../csv_data/">csv_data</a></td>
-<td>1..* <br/> <a href="../File/">File</a></td>
+<td>0..* <br/> <a href="../CsvFile/">CsvFile</a></td>
 <td>Tabular output from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../raw_data/">raw_data</a></td>
-<td>0..* <br/> <a href="../File/">File</a></td>
+<td>0..* <br/> <a href="../DataFile/">DataFile</a></td>
 <td>Raw data output from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../viz_data/">viz_data</a></td>
-<td>0..* <br/> <a href="../File/">File</a></td>
+<td>0..* <br/> <a href="../VisualizationFile/">VisualizationFile</a></td>
 <td>Visualization output from a simulation</td>
 <td>direct</td>
 </tr>
@@ -303,7 +303,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Dataset</td>
+<td>https://schema.org/Dataset</td>
 </tr>
 <tr>
 <td>native</td>
@@ -326,7 +326,7 @@ slots:
 - hardware
 - memory_in_kb
 - time_in_s
-class_uri: schema:Dataset
+class_uri: https://schema.org/Dataset
 
 </code></pre>
 </details>
@@ -347,8 +347,7 @@ attributes:
     owner: Results
     domain_of:
     - Results
-    range: File
-    required: true
+    range: CsvFile
     inlined: true
     inlined_as_list: true
   raw_data:
@@ -361,7 +360,7 @@ attributes:
     owner: Results
     domain_of:
     - Results
-    range: File
+    range: DataFile
     inlined: true
     inlined_as_list: true
   viz_data:
@@ -374,7 +373,7 @@ attributes:
     owner: Results
     domain_of:
     - Results
-    range: File
+    range: VisualizationFile
     inlined: true
     inlined_as_list: true
   hardware:
@@ -400,13 +399,13 @@ attributes:
     range: integer
     unit:
       ucum_code: KIB*BY
-      has_quantity_kind: UO:0000245
+      has_quantity_kind: http://purl.obolibrary.org/obo/UO_0000245
   time_in_s:
     name: time_in_s
     description: Amount of time required to execute the simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:Number
+    slot_uri: https://schema.org/Number
     alias: time_in_s
     owner: Results
     domain_of:
@@ -414,8 +413,8 @@ attributes:
     range: integer
     unit:
       ucum_code: S
-      has_quantity_kind: NCIT:C42535
-class_uri: schema:Dataset
+      has_quantity_kind: http://purl.obolibrary.org/obo/NCIT_C42535
+class_uri: https://schema.org/Dataset
 
 </code></pre>
 </details>

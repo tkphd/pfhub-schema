@@ -201,17 +201,17 @@
 </a>
 <h1 id="class-software">Class: Software</h1>
 <p><em>A software product, download, or repository.</em></p>
-<p>URI: <a href="http://schema.org/SoftwareApplication">schema:SoftwareApplication</a></p>
+<p>URI: <a href="https://schema.org/SoftwareApplication">https://schema.org/SoftwareApplication</a></p>
 <div class="mermaid"> classDiagram
     class Software
+      Software : commit
+        Software &lt;.. string : commit
       Software : download
         Software &lt;.. uriorcurie : download
-      Software : id
-        Software &lt;.. uriorcurie : id
       Software : name
         Software &lt;.. string : name
-      Software : repository
-        Software &lt;.. uriorcurie : repository
+      Software : url
+        Software &lt;.. uriorcurie : url
       Software : version
         Software &lt;.. string : version
 
@@ -229,9 +229,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>Unique identifier that must not collide with any other</td>
+<td><a href="../url/">url</a></td>
+<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
+<td>URL of an online resource or website</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -241,15 +241,15 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../download/">download</a></td>
-<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>Link to a download URL</td>
+<td><a href="../commit/">commit</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Commit hash in a repository of source code</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../repository/">repository</a></td>
+<td><a href="../download/">download</a></td>
 <td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>A repository of source code</td>
+<td>Link to a download URL</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -295,7 +295,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:SoftwareApplication</td>
+<td>https://schema.org/SoftwareApplication</td>
 </tr>
 <tr>
 <td>native</td>
@@ -312,12 +312,19 @@ description: A software product, download, or repository.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
-- id
+- url
 - name
+- commit
 - download
-- repository
 - version
-class_uri: schema:SoftwareApplication
+slot_usage:
+  url:
+    name: url
+    identifier: true
+    domain_of:
+    - Software
+    - SourceCode
+class_uri: https://schema.org/SoftwareApplication
 
 </code></pre>
 </details>
@@ -327,81 +334,80 @@ class_uri: schema:SoftwareApplication
 description: A software product, download, or repository.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-attributes:
-  id:
-    name: id
-    description: Unique identifier that must not collide with any other.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: schema:identifier
-    multivalued: false
+slot_usage:
+  url:
+    name: url
     identifier: true
-    alias: id
-    owner: Software
     domain_of:
-    - Benchmark
-    - Contributor
-    - File
     - Software
     - SourceCode
-    - BenchmarkResult
+attributes:
+  url:
+    name: url
+    description: URL of an online resource or website.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: https://schema.org/url
+    identifier: true
+    alias: url
+    owner: Software
+    domain_of:
+    - Software
+    - SourceCode
     range: uriorcurie
-    required: true
   name:
     name: name
     description: Informal or human-memorable identifier that may collide with others.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:name
+    slot_uri: https://schema.org/name
     multivalued: false
     alias: name
     owner: Software
     domain_of:
-    - Benchmark
     - Contributor
     - File
     - Software
     - SourceCode
-    - BenchmarkResult
     range: string
+  commit:
+    name: commit
+    description: Commit hash in a repository of source code.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: https://en.wikipedia.org/wiki/Commit_(version_control)
+    alias: commit
+    owner: Software
+    domain_of:
+    - Software
+    - SourceCode
+    range: string
+    pattern: ^\S+
   download:
     name: download
     description: Link to a download URL.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:downloadUrl
+    slot_uri: https://schema.org/downloadUrl
     alias: download
     owner: Software
     domain_of:
     - Software
-    range: uriorcurie
-  repository:
-    name: repository
-    description: A repository of source code.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: schema:codeRepository
-    alias: repository
-    owner: Software
-    domain_of:
-    - Software
-    - SourceCode
     range: uriorcurie
   version:
     name: version
     description: Semantic version of a software project.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:softwareVersion
+    slot_uri: https://schema.org/softwareVersion
     alias: version
     owner: Software
     domain_of:
-    - Benchmark
     - Software
     range: string
     recommended: true
     pattern: ^[\d+\.]+
-class_uri: schema:SoftwareApplication
+class_uri: https://schema.org/SoftwareApplication
 
 </code></pre>
 </details>

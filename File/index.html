@@ -142,13 +142,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#slots">
-    Slots
+<a class="md-nav__link" href="#inheritance">
+    Inheritance
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#usages">
-    Usages
+<a class="md-nav__link" href="#slots">
+    Slots
   </a>
 </li>
 <li class="md-nav__item">
@@ -204,20 +204,30 @@
 <ul>
 <li><strong>NOTE</strong>: this is an abstract class and should not be instantiated directly</li>
 </ul>
-<p>URI: <a href="http://schema.org/DigitalDocument">schema:DigitalDocument</a></p>
+<p>URI: <a href="https://schema.org/DigitalDocument">https://schema.org/DigitalDocument</a></p>
 <div class="mermaid"> classDiagram
     class File
-      File : columns
-        File &lt;.. string : columns
+      File &lt;|-- CsvFile
+      File &lt;|-- DataFile
+      File &lt;|-- Tarball
+      File &lt;|-- VisualizationFile
+
       File : format
         File &lt;.. string : format
-      File : id
-        File &lt;.. uriorcurie : id
       File : name
         File &lt;.. string : name
 
 </div>
-<!-- no inheritance hierarchy -->
+<h2 id="inheritance">Inheritance</h2>
+<ul>
+<li><strong>File</strong><ul>
+<li><a href="../CsvFile/">CsvFile</a></li>
+<li><a href="../DataFile/">DataFile</a></li>
+<li><a href="../Tarball/">Tarball</a></li>
+<li><a href="../VisualizationFile/">VisualizationFile</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="slots">Slots</h2>
 <table>
 <thead>
@@ -230,21 +240,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>Unique identifier that must not collide with any other</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Informal or human-memorable identifier that may collide with others</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../columns/">columns</a></td>
-<td>0..* <br/> <a href="../String/">String</a></td>
-<td>Column names applied to tabular data</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -252,37 +250,6 @@
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Format of data contained in a file</td>
 <td>direct</td>
-</tr>
-</tbody>
-</table>
-<h2 id="usages">Usages</h2>
-<table>
-<thead>
-<tr>
-<th>used by</th>
-<th>used in</th>
-<th>type</th>
-<th>used</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../Results/">Results</a></td>
-<td><a href="../csv_data/">csv_data</a></td>
-<td>range</td>
-<td><a href="./">File</a></td>
-</tr>
-<tr>
-<td><a href="../Results/">Results</a></td>
-<td><a href="../raw_data/">raw_data</a></td>
-<td>range</td>
-<td><a href="./">File</a></td>
-</tr>
-<tr>
-<td><a href="../Results/">Results</a></td>
-<td><a href="../viz_data/">viz_data</a></td>
-<td>range</td>
-<td><a href="./">File</a></td>
 </tr>
 </tbody>
 </table>
@@ -302,7 +269,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:DigitalDocument</td>
+<td>https://schema.org/DigitalDocument</td>
 </tr>
 <tr>
 <td>native</td>
@@ -320,11 +287,18 @@ from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 abstract: true
 slots:
-- id
 - name
-- columns
 - format
-class_uri: schema:DigitalDocument
+slot_usage:
+  name:
+    name: name
+    identifier: true
+    domain_of:
+    - Contributor
+    - File
+    - Software
+    - SourceCode
+class_uri: https://schema.org/DigitalDocument
 
 </code></pre>
 </details>
@@ -335,69 +309,44 @@ description: A generic electronic information container.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 abstract: true
-attributes:
-  id:
-    name: id
-    description: Unique identifier that must not collide with any other.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: schema:identifier
-    multivalued: false
+slot_usage:
+  name:
+    name: name
     identifier: true
-    alias: id
-    owner: File
     domain_of:
-    - Benchmark
     - Contributor
     - File
     - Software
     - SourceCode
-    - BenchmarkResult
-    range: uriorcurie
-    required: true
+attributes:
   name:
     name: name
     description: Informal or human-memorable identifier that may collide with others.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:name
+    slot_uri: https://schema.org/name
     multivalued: false
+    identifier: true
     alias: name
     owner: File
     domain_of:
-    - Benchmark
     - Contributor
     - File
     - Software
     - SourceCode
-    - BenchmarkResult
     range: string
-  columns:
-    name: columns
-    description: Column names applied to tabular data.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    multivalued: true
-    alias: columns
-    owner: File
-    domain_of:
-    - File
-    range: string
-    inlined: true
-    inlined_as_list: true
-    pattern: ^\S+
   format:
     name: format
     description: Format of data contained in a file.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:encodingFormat
+    slot_uri: https://schema.org/encodingFormat
     alias: format
     owner: File
     domain_of:
     - File
     range: string
-class_uri: schema:DigitalDocument
+class_uri: https://schema.org/DigitalDocument
 
 </code></pre>
 </details>

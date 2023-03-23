@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/architecture/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/url/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: architecture - pfhub-schema</title>
+        <title>Slot: url - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-architecture" class="md-skip">
+        <a href="#slot-url" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: architecture
+              Slot: url
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/architecture.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/url.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-architecture">Slot: architecture</h1>
-<p><em>Computer processor architecture required for this simulation.</em></p>
-<p>URI: <a href="http://www.fairsharing.org/ontology/subject/SRAO_0000258">http://www.fairsharing.org/ontology/subject/SRAO_0000258</a></p>
+<h1 id="slot-url">Slot: url</h1>
+<p><em>URL of an online resource or website.</em></p>
+<p>URI: <a href="https://schema.org/url">https://schema.org/url</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -331,14 +331,18 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../ComputeResource/">ComputeResource</a></td>
-<td>Summary of the hardware used to execute the simulation</td>
+<td><a href="../Software/">Software</a></td>
+<td>A software product, download, or repository</td>
+</tr>
+<tr>
+<td><a href="../SourceCode/">SourceCode</a></td>
+<td>Link to the authors' implementation of the benchmark problem</td>
 </tr>
 </tbody>
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../String/">String</a></li>
+<li>Range: <a href="../Uriorcurie/">Uriorcurie</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -348,15 +352,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: architecture
-description: Computer processor architecture required for this simulation.
+<pre><code class="language-yaml">name: url
+description: URL of an online resource or website.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-slot_uri: http://www.fairsharing.org/ontology/subject/SRAO_0000258
-alias: architecture
+slot_uri: https://schema.org/url
+alias: url
 domain_of:
-- ComputeResource
-range: string
+- Software
+- SourceCode
+range: uriorcurie
 
 </code></pre>
 

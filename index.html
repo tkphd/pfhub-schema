@@ -393,10 +393,6 @@ Name: pfhub_schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="Benchmark/">Benchmark</a></td>
-<td>Information about the specific Benchmark solved</td>
-</tr>
-<tr>
 <td><a href="BenchmarkResult/">BenchmarkResult</a></td>
 <td>Root and context for this Benchmark Problem solution</td>
 </tr>
@@ -407,6 +403,14 @@ Name: pfhub_schema</p>
 <tr>
 <td><a href="Contributor/">Contributor</a></td>
 <td>Someone who contributed to this solution</td>
+</tr>
+<tr>
+<td><a href="CsvFile/">CsvFile</a></td>
+<td>Data represented by Comma-separated values in plain text</td>
+</tr>
+<tr>
+<td><a href="DataFile/">DataFile</a></td>
+<td>Data represented in an application-specific or binary format</td>
 </tr>
 <tr>
 <td><a href="File/">File</a></td>
@@ -423,6 +427,14 @@ Name: pfhub_schema</p>
 <tr>
 <td><a href="SourceCode/">SourceCode</a></td>
 <td>Link to the authors' implementation of the benchmark problem</td>
+</tr>
+<tr>
+<td><a href="Tarball/">Tarball</a></td>
+<td>Gzip-compressed Tar data archive</td>
+</tr>
+<tr>
+<td><a href="VisualizationFile/">VisualizationFile</a></td>
+<td>Visualization data</td>
 </tr>
 </tbody>
 </table>
@@ -444,12 +456,20 @@ Name: pfhub_schema</p>
 <td>Computer processor architecture required for this simulation</td>
 </tr>
 <tr>
-<td><a href="benchmark/">benchmark</a></td>
-<td>Details of the Benchmark Problem</td>
+<td><a href="benchmark_problem/">benchmark_problem</a></td>
+<td>Alphanumerical identifier for part of a Benchmark Problem</td>
+</tr>
+<tr>
+<td><a href="benchmark_version/">benchmark_version</a></td>
+<td>Numerical identifier for a Benchmark Problem version</td>
 </tr>
 <tr>
 <td><a href="columns/">columns</a></td>
 <td>Column names applied to tabular data</td>
+</tr>
+<tr>
+<td><a href="commit/">commit</a></td>
+<td>Commit hash in a repository of source code</td>
 </tr>
 <tr>
 <td><a href="contributors/">contributors</a></td>
@@ -516,10 +536,6 @@ Name: pfhub_schema</p>
 <td>Raw data output from a simulation</td>
 </tr>
 <tr>
-<td><a href="repository/">repository</a></td>
-<td>A repository of source code</td>
-</tr>
-<tr>
 <td><a href="results/">results</a></td>
 <td>Collection of outputs and summary data from a simulation</td>
 </tr>
@@ -530,6 +546,10 @@ Name: pfhub_schema</p>
 <tr>
 <td><a href="time_in_s/">time_in_s</a></td>
 <td>Amount of time required to execute the simulation</td>
+</tr>
+<tr>
+<td><a href="url/">url</a></td>
+<td>URL of an online resource or website</td>
 </tr>
 <tr>
 <td><a href="version/">version</a></td>
@@ -551,8 +571,20 @@ Name: pfhub_schema</p>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
+<td><a href="CsvFileTypes/">CsvFileTypes</a></td>
+<td>Valid CSV file extensions</td>
+</tr>
+<tr>
+<td><a href="TarballTypes/">TarballTypes</a></td>
+<td>Valid tarball file extensions</td>
+</tr>
+<tr>
+<td><a href="ValidBenchmarkProblem/">ValidBenchmarkProblem</a></td>
+<td>Known parts of the accepted PFHub Benchmark Problems</td>
+</tr>
+<tr>
+<td><a href="ValidBenchmarkVersion/">ValidBenchmarkVersion</a></td>
+<td>Known versions of the accepted PFHub Benchmark Problems</td>
 </tr>
 </tbody>
 </table>

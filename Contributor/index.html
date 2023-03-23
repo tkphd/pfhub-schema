@@ -201,7 +201,7 @@
 </a>
 <h1 id="class-contributor">Class: Contributor</h1>
 <p><em>Someone who contributed to this solution.</em></p>
-<p>URI: <a href="http://schema.org/Person">schema:Person</a></p>
+<p>URI: <a href="https://schema.org/Person">https://schema.org/Person</a></p>
 <div class="mermaid"> classDiagram
     class Contributor
       Contributor : affiliation
@@ -295,7 +295,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>schema:Person</td>
+<td>https://schema.org/Person</td>
 </tr>
 <tr>
 <td>native</td>
@@ -317,7 +317,7 @@ slots:
 - handle
 - affiliation
 - email
-class_uri: schema:Person
+class_uri: https://schema.org/Person
 
 </code></pre>
 </details>
@@ -333,18 +333,14 @@ attributes:
     description: Unique identifier that must not collide with any other.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:identifier
+    slot_uri: https://schema.org/identifier
     multivalued: false
     identifier: true
     alias: id
     owner: Contributor
     domain_of:
-    - Benchmark
-    - Contributor
-    - File
-    - Software
-    - SourceCode
     - BenchmarkResult
+    - Contributor
     range: uriorcurie
     required: true
   name:
@@ -352,24 +348,22 @@ attributes:
     description: Informal or human-memorable identifier that may collide with others.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:name
+    slot_uri: https://schema.org/name
     multivalued: false
     alias: name
     owner: Contributor
     domain_of:
-    - Benchmark
     - Contributor
     - File
     - Software
     - SourceCode
-    - BenchmarkResult
     range: string
   handle:
     name: handle
     description: A person's identifier on a website, without the "at" symbol.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:member
+    slot_uri: https://schema.org/member
     multivalued: true
     alias: handle
     owner: Contributor
@@ -396,14 +390,14 @@ attributes:
     description: A person's electronic mailing address.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:email
+    slot_uri: https://schema.org/email
     alias: email
     owner: Contributor
     domain_of:
     - Contributor
     range: string
     pattern: ^\S+@[\S+\.]+\S+
-class_uri: schema:Person
+class_uri: https://schema.org/Person
 
 </code></pre>
 </details>

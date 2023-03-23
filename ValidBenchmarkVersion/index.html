@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/benchmark/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/ValidBenchmarkVersion/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: benchmark - pfhub-schema</title>
+        <title>Enum: ValidBenchmarkVersion - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-benchmark" class="md-skip">
+        <a href="#enum-validbenchmarkversion" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: benchmark
+              Enum: ValidBenchmarkVersion
             
           </span>
         </div>
@@ -256,15 +256,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
@@ -310,36 +303,37 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/benchmark.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/ValidBenchmarkVersion.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-benchmark">Slot: benchmark</h1>
-<p><em>Details of the Benchmark Problem.</em></p>
-<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/benchmark">pfhub:benchmark</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-validbenchmarkversion">Enum: ValidBenchmarkVersion</h1>
+<p><em>Known versions of the accepted PFHub Benchmark Problems.</em></p>
+<p>URI: <a href="ValidBenchmarkVersion">ValidBenchmarkVersion</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
 <table>
 <thead>
 <tr>
-<th>Name</th>
+<th>Value</th>
+<th>Meaning</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
-<td>Root and context for this Benchmark Problem solution</td>
+<td>0</td>
+<td>None</td>
+<td>Initial or Hackathon version</td>
+</tr>
+<tr>
+<td>1</td>
+<td>None</td>
+<td>Published version</td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../Benchmark/">Benchmark</a></li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -348,14 +342,17 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: benchmark
-description: Details of the Benchmark Problem.
+<pre><code class="language-yaml">name: ValidBenchmarkVersion
+description: Known versions of the accepted PFHub Benchmark Problems.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-alias: benchmark
-domain_of:
-- BenchmarkResult
-range: Benchmark
+permissible_values:
+  '0':
+    text: '0'
+    description: Initial or Hackathon version.
+  '1':
+    text: '1'
+    description: Published version.
 
 </code></pre>
 

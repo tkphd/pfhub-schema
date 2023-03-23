@@ -199,8 +199,10 @@
 <p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/BenchmarkResult">pfhub:BenchmarkResult</a></p>
 <div class="mermaid"> classDiagram
     class BenchmarkResult
-      BenchmarkResult : benchmark
-        BenchmarkResult &lt;.. Benchmark : benchmark
+      BenchmarkResult : benchmark_problem
+        BenchmarkResult &lt;.. ValidBenchmarkProblem : benchmark_problem
+      BenchmarkResult : benchmark_version
+        BenchmarkResult &lt;.. integer : benchmark_version
       BenchmarkResult : contributors
         BenchmarkResult &lt;.. Contributor : contributors
       BenchmarkResult : date_created
@@ -211,8 +213,6 @@
         BenchmarkResult &lt;.. uriorcurie : id
       BenchmarkResult : implementation
         BenchmarkResult &lt;.. SourceCode : implementation
-      BenchmarkResult : name
-        BenchmarkResult &lt;.. string : name
       BenchmarkResult : results
         BenchmarkResult &lt;.. Results : results
       BenchmarkResult : summary
@@ -238,15 +238,15 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../name/">name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Informal or human-memorable identifier that may collide with others</td>
+<td><a href="../benchmark_problem/">benchmark_problem</a></td>
+<td>1..1 <br/> <a href="../ValidBenchmarkProblem/">ValidBenchmarkProblem</a></td>
+<td>Alphanumerical identifier for part of a Benchmark Problem</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../benchmark/">benchmark</a></td>
-<td>0..1 <br/> <a href="../Benchmark/">Benchmark</a></td>
-<td>Details of the Benchmark Problem</td>
+<td><a href="../benchmark_version/">benchmark_version</a></td>
+<td>1..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Numerical identifier for a Benchmark Problem version</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -321,14 +321,15 @@ from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
 - id
-- name
-- benchmark
+- benchmark_problem
+- benchmark_version
 - contributors
 - date_created
 - framework
 - implementation
 - results
 - summary
+tree_root: true
 
 </code></pre>
 </details>
@@ -344,67 +345,60 @@ attributes:
     description: Unique identifier that must not collide with any other.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:identifier
+    slot_uri: https://schema.org/identifier
     multivalued: false
     identifier: true
     alias: id
     owner: BenchmarkResult
     domain_of:
-    - Benchmark
-    - Contributor
-    - File
-    - Software
-    - SourceCode
     - BenchmarkResult
+    - Contributor
     range: uriorcurie
     required: true
-  name:
-    name: name
-    description: Informal or human-memorable identifier that may collide with others.
+  benchmark_problem:
+    name: benchmark_problem
+    description: Alphanumerical identifier for part of a Benchmark Problem.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:name
     multivalued: false
-    alias: name
+    alias: benchmark_problem
     owner: BenchmarkResult
     domain_of:
-    - Benchmark
-    - Contributor
-    - File
-    - Software
-    - SourceCode
     - BenchmarkResult
-    range: string
-  benchmark:
-    name: benchmark
-    description: Details of the Benchmark Problem.
+    range: ValidBenchmarkProblem
+    required: true
+    pattern: ^\d\a
+  benchmark_version:
+    name: benchmark_version
+    description: Numerical identifier for a Benchmark Problem version.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    alias: benchmark
+    multivalued: false
+    alias: benchmark_version
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
-    range: Benchmark
+    range: integer
+    required: true
   contributors:
     name: contributors
     description: Collection of people who worked on this solution.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:contributor
+    slot_uri: https://schema.org/contributor
     multivalued: true
     alias: contributors
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
     range: Contributor
-    inlined: true
     inlined_as_list: true
   date_created:
     name: date_created
     description: Day when an item was uploaded, released, or published.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:dateCreated
+    slot_uri: https://schema.org/dateCreated
     alias: date_created
     owner: BenchmarkResult
     domain_of:
@@ -415,25 +409,26 @@ attributes:
     description: A computer program or library
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:SoftwareApplication
+    slot_uri: https://schema.org/SoftwareApplication
     multivalued: true
     alias: framework
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
     range: Software
-    inlined: true
     inlined_as_list: true
   implementation:
     name: implementation
     description: Source code implementing the solution.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
+    multivalued: false
     alias: implementation
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
     range: SourceCode
+    inlined_as_list: true
   results:
     name: results
     description: Collection of outputs and summary data from a simulation.
@@ -450,13 +445,14 @@ attributes:
     description: Text description, abstract, or narrative.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
-    slot_uri: schema:abstract
+    slot_uri: https://schema.org/abstract
     multivalued: false
     alias: summary
     owner: BenchmarkResult
     domain_of:
     - BenchmarkResult
     range: string
+tree_root: true
 
 </code></pre>
 </details>
