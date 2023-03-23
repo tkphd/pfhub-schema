@@ -215,6 +215,8 @@
         BenchmarkResult &lt;.. SourceCode : implementation
       BenchmarkResult : results
         BenchmarkResult &lt;.. Results : results
+      BenchmarkResult : schema
+        BenchmarkResult &lt;.. SourceCode : schema
       BenchmarkResult : summary
         BenchmarkResult &lt;.. string : summary
 
@@ -280,6 +282,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../schema/">schema</a></td>
+<td>0..1 <br/> <a href="../SourceCode/">SourceCode</a></td>
+<td>Version of the PFHub Schema this record conforms to</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../summary/">summary</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Text description, abstract, or narrative</td>
@@ -328,6 +336,7 @@ slots:
 - framework
 - implementation
 - results
+- schema
 - summary
 tree_root: true
 
@@ -440,6 +449,18 @@ attributes:
     domain_of:
     - BenchmarkResult
     range: Results
+  schema:
+    name: schema
+    description: Version of the PFHub Schema this record conforms to.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: false
+    alias: schema
+    owner: BenchmarkResult
+    domain_of:
+    - BenchmarkResult
+    range: SourceCode
+    inlined_as_list: true
   summary:
     name: summary
     description: Text description, abstract, or narrative.

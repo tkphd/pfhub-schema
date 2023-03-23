@@ -281,6 +281,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://tkphd.github.io/pfhub-schema/schema/</loc>
+         <lastmod>2023-03-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://tkphd.github.io/pfhub-schema/summary/</loc>
          <lastmod>2023-03-23</lastmod>
          <changefreq>daily</changefreq>
