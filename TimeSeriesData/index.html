@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://tkphd.github.io/pfhub-schema/DataFile/" rel="canonical"/>
+<link href="https://tkphd.github.io/pfhub-schema/TimeSeriesData/" rel="canonical"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Class: DataFile - pfhub-schema</title>
+<title>Class: TimeSeriesData - pfhub-schema</title>
 <link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -21,7 +21,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#class-datafile">
+<a class="md-skip" href="#class-timeseriesdata">
           Skip to content
         </a>
 </div>
@@ -45,7 +45,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Class: DataFile
+              Class: TimeSeriesData
             
           </span>
 </div>
@@ -201,26 +201,28 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/tkphd/pfhub-schema/edit/master/docs/DataFile.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/tkphd/pfhub-schema/edit/master/docs/TimeSeriesData.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="class-datafile">Class: DataFile</h1>
-<p><em>Data represented in an application-specific or binary format.</em></p>
-<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/DataFile">pfhub:DataFile</a></p>
+<h1 id="class-timeseriesdata">Class: TimeSeriesData</h1>
+<p><em>Specialization of a pfhub:File representing a time series in plain text using named columns of comma-separated values.</em></p>
+<p>URI: <a href="https://en.wikipedia.org/wiki/Comma-separated_values">https://en.wikipedia.org/wiki/Comma-separated_values</a></p>
 <div class="mermaid"> classDiagram
-    class DataFile
-      File &lt;|-- DataFile
+    class TimeSeriesData
+      File &lt;|-- TimeSeriesData
 
-      DataFile : format
-        DataFile &lt;.. string : format
-      DataFile : name
-        DataFile &lt;.. string : name
+      TimeSeriesData : columns
+        TimeSeriesData &lt;.. string : columns
+      TimeSeriesData : format
+        TimeSeriesData &lt;.. TabularFiles : format
+      TimeSeriesData : name
+        TimeSeriesData &lt;.. string : name
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><a href="../File/">File</a><ul>
-<li><strong>DataFile</strong></li>
+<li><strong>TimeSeriesData</strong></li>
 </ul>
 </li>
 </ul>
@@ -236,6 +238,12 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../columns/">columns</a></td>
+<td>0..* <br/> <a href="../String/">String</a></td>
+<td>Column names applied to tabular data</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Informal or human-memorable identifier that may collide with others</td>
@@ -243,7 +251,7 @@
 </tr>
 <tr>
 <td><a href="../format/">format</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../TabularFiles/">TabularFiles</a></td>
 <td>Format of data contained in a file</td>
 <td><a href="../File/">File</a></td>
 </tr>
@@ -262,9 +270,9 @@
 <tbody>
 <tr>
 <td><a href="../Results/">Results</a></td>
-<td><a href="../raw_data/">raw_data</a></td>
+<td><a href="../file_timeseries/">file_timeseries</a></td>
 <td>range</td>
-<td><a href="./">DataFile</a></td>
+<td><a href="./">TimeSeriesData</a></td>
 </tr>
 </tbody>
 </table>
@@ -284,11 +292,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>pfhub:DataFile</td>
+<td>https://en.wikipedia.org/wiki/Comma-separated_values</td>
 </tr>
 <tr>
 <td>native</td>
-<td>pfhub:DataFile</td>
+<td>pfhub:TimeSeriesData</td>
 </tr>
 </tbody>
 </table>
@@ -296,22 +304,53 @@
 <!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
 <h3 id="direct">Direct</h3>
 <details>
-<pre><code class="language-yaml">name: DataFile
-description: Data represented in an application-specific or binary format.
+<pre><code class="language-yaml">name: TimeSeriesData
+description: Specialization of a pfhub:File representing a time series in plain text
+  using named columns of comma-separated values.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 is_a: File
+slots:
+- columns
+slot_usage:
+  format:
+    name: format
+    domain_of:
+    - File
+    range: TabularFiles
+class_uri: https://en.wikipedia.org/wiki/Comma-separated_values
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
-<pre><code class="language-yaml">name: DataFile
-description: Data represented in an application-specific or binary format.
+<pre><code class="language-yaml">name: TimeSeriesData
+description: Specialization of a pfhub:File representing a time series in plain text
+  using named columns of comma-separated values.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 is_a: File
+slot_usage:
+  format:
+    name: format
+    domain_of:
+    - File
+    range: TabularFiles
 attributes:
+  columns:
+    name: columns
+    description: Column names applied to tabular data.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: true
+    alias: columns
+    owner: TimeSeriesData
+    domain_of:
+    - TimeSeriesData
+    range: string
+    inlined: true
+    inlined_as_list: true
+    pattern: ^\S+
   name:
     name: name
     description: Informal or human-memorable identifier that may collide with others.
@@ -321,7 +360,7 @@ attributes:
     multivalued: false
     identifier: true
     alias: name
-    owner: DataFile
+    owner: TimeSeriesData
     domain_of:
     - Contributor
     - File
@@ -335,10 +374,11 @@ attributes:
     rank: 1000
     slot_uri: https://schema.org/encodingFormat
     alias: format
-    owner: DataFile
+    owner: TimeSeriesData
     domain_of:
     - File
-    range: string
+    range: TabularFiles
+class_uri: https://en.wikipedia.org/wiki/Comma-separated_values
 
 </code></pre>
 </details>

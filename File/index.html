@@ -207,10 +207,10 @@
 <p>URI: <a href="https://schema.org/DigitalDocument">https://schema.org/DigitalDocument</a></p>
 <div class="mermaid"> classDiagram
     class File
-      File &lt;|-- CsvFile
-      File &lt;|-- DataFile
-      File &lt;|-- Tarball
-      File &lt;|-- VisualizationFile
+      File &lt;|-- ArchiveData
+      File &lt;|-- FieldData
+      File &lt;|-- TimeSeriesData
+      File &lt;|-- ImageData
 
       File : format
         File &lt;.. string : format
@@ -221,10 +221,10 @@
 <h2 id="inheritance">Inheritance</h2>
 <ul>
 <li><strong>File</strong><ul>
-<li><a href="../CsvFile/">CsvFile</a></li>
-<li><a href="../DataFile/">DataFile</a></li>
-<li><a href="../Tarball/">Tarball</a></li>
-<li><a href="../VisualizationFile/">VisualizationFile</a></li>
+<li><a href="../ArchiveData/">ArchiveData</a></li>
+<li><a href="../FieldData/">FieldData</a></li>
+<li><a href="../TimeSeriesData/">TimeSeriesData</a></li>
+<li><a href="../ImageData/">ImageData</a></li>
 </ul>
 </li>
 </ul>

@@ -393,6 +393,10 @@ Name: pfhub_schema</p>
 </thead>
 <tbody>
 <tr>
+<td><a href="ArchiveData/">ArchiveData</a></td>
+<td>Specialization of a pfhub:File containing a compressed data archive</td>
+</tr>
+<tr>
 <td><a href="BenchmarkResult/">BenchmarkResult</a></td>
 <td>Root and context for this Benchmark Problem solution</td>
 </tr>
@@ -405,16 +409,16 @@ Name: pfhub_schema</p>
 <td>Someone who contributed to this solution</td>
 </tr>
 <tr>
-<td><a href="CsvFile/">CsvFile</a></td>
-<td>Data represented by Comma-separated values in plain text</td>
-</tr>
-<tr>
-<td><a href="DataFile/">DataFile</a></td>
-<td>Data represented in an application-specific or binary format</td>
+<td><a href="FieldData/">FieldData</a></td>
+<td>Specialization of a pfhub:File representing field variables in a simulation d...</td>
 </tr>
 <tr>
 <td><a href="File/">File</a></td>
 <td>A generic electronic information container</td>
+</tr>
+<tr>
+<td><a href="ImageData/">ImageData</a></td>
+<td>Specialization of a pfhub:File for images and visualization data</td>
 </tr>
 <tr>
 <td><a href="Results/">Results</a></td>
@@ -429,12 +433,8 @@ Name: pfhub_schema</p>
 <td>Link to the authors' implementation of the benchmark problem</td>
 </tr>
 <tr>
-<td><a href="Tarball/">Tarball</a></td>
-<td>Gzip-compressed Tar data archive</td>
-</tr>
-<tr>
-<td><a href="VisualizationFile/">VisualizationFile</a></td>
-<td>Visualization data</td>
+<td><a href="TimeSeriesData/">TimeSeriesData</a></td>
+<td>Specialization of a pfhub:File representing a time series in plain text using...</td>
 </tr>
 </tbody>
 </table>
@@ -480,10 +480,6 @@ Name: pfhub_schema</p>
 <td>Number of parallel cores or threads of execution used by the simulation on a ...</td>
 </tr>
 <tr>
-<td><a href="csv_data/">csv_data</a></td>
-<td>Tabular output from a simulation</td>
-</tr>
-<tr>
 <td><a href="date_created/">date_created</a></td>
 <td>Day when an item was uploaded, released, or published</td>
 </tr>
@@ -494,6 +490,26 @@ Name: pfhub_schema</p>
 <tr>
 <td><a href="email/">email</a></td>
 <td>A person's electronic mailing address</td>
+</tr>
+<tr>
+<td><a href="fictive_time/">fictive_time</a></td>
+<td>Maximum simulated (or "fictive") time reached</td>
+</tr>
+<tr>
+<td><a href="file_archive/">file_archive</a></td>
+<td>Compressed data</td>
+</tr>
+<tr>
+<td><a href="file_spatial/">file_spatial</a></td>
+<td>Raw data output from a simulation</td>
+</tr>
+<tr>
+<td><a href="file_timeseries/">file_timeseries</a></td>
+<td>Columnar timeseries data from a simulation</td>
+</tr>
+<tr>
+<td><a href="file_visual/">file_visual</a></td>
+<td>Visualization output from a simulation</td>
 </tr>
 <tr>
 <td><a href="format/">format</a></td>
@@ -532,10 +548,6 @@ Name: pfhub_schema</p>
 <td>Number of machines allocated for the simulation in a computer cluster environ...</td>
 </tr>
 <tr>
-<td><a href="raw_data/">raw_data</a></td>
-<td>Raw data output from a simulation</td>
-</tr>
-<tr>
 <td><a href="results/">results</a></td>
 <td>Collection of outputs and summary data from a simulation</td>
 </tr>
@@ -559,10 +571,6 @@ Name: pfhub_schema</p>
 <td><a href="version/">version</a></td>
 <td>Semantic version of a software project</td>
 </tr>
-<tr>
-<td><a href="viz_data/">viz_data</a></td>
-<td>Visualization output from a simulation</td>
-</tr>
 </tbody>
 </table>
 <h2 id="enumerations">Enumerations</h2>
@@ -575,12 +583,20 @@ Name: pfhub_schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="CsvFileTypes/">CsvFileTypes</a></td>
-<td>Valid CSV file extensions</td>
+<td><a href="CompressedFiles/">CompressedFiles</a></td>
+<td>Valid compressed archive file extensions</td>
 </tr>
 <tr>
-<td><a href="TarballTypes/">TarballTypes</a></td>
-<td>Valid tarball file extensions</td>
+<td><a href="DataFiles/">DataFiles</a></td>
+<td>Valid raw or transformed spatial phase-field data file extensions</td>
+</tr>
+<tr>
+<td><a href="ImageFiles/">ImageFiles</a></td>
+<td>Valid image and visualization file extensions</td>
+</tr>
+<tr>
+<td><a href="TabularFiles/">TabularFiles</a></td>
+<td>Valid tabular file extensions</td>
 </tr>
 <tr>
 <td><a href="ValidBenchmarkProblem/">ValidBenchmarkProblem</a></td>

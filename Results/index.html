@@ -204,18 +204,22 @@
 <p>URI: <a href="https://schema.org/Dataset">https://schema.org/Dataset</a></p>
 <div class="mermaid"> classDiagram
     class Results
-      Results : csv_data
-        Results &lt;.. CsvFile : csv_data
+      Results : fictive_time
+        Results &lt;.. float : fictive_time
+      Results : file_archive
+        Results &lt;.. ArchiveData : file_archive
+      Results : file_spatial
+        Results &lt;.. FieldData : file_spatial
+      Results : file_timeseries
+        Results &lt;.. TimeSeriesData : file_timeseries
+      Results : file_visual
+        Results &lt;.. ImageData : file_visual
       Results : hardware
         Results &lt;.. ComputeResource : hardware
       Results : memory_in_kb
         Results &lt;.. integer : memory_in_kb
-      Results : raw_data
-        Results &lt;.. DataFile : raw_data
       Results : time_in_s
         Results &lt;.. integer : time_in_s
-      Results : viz_data
-        Results &lt;.. VisualizationFile : viz_data
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -231,21 +235,33 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../csv_data/">csv_data</a></td>
-<td>0..* <br/> <a href="../CsvFile/">CsvFile</a></td>
-<td>Tabular output from a simulation</td>
+<td><a href="../file_archive/">file_archive</a></td>
+<td>0..* <br/> <a href="../ArchiveData/">ArchiveData</a></td>
+<td>Compressed data</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../raw_data/">raw_data</a></td>
-<td>0..* <br/> <a href="../DataFile/">DataFile</a></td>
+<td><a href="../file_spatial/">file_spatial</a></td>
+<td>0..* <br/> <a href="../FieldData/">FieldData</a></td>
 <td>Raw data output from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../viz_data/">viz_data</a></td>
-<td>0..* <br/> <a href="../VisualizationFile/">VisualizationFile</a></td>
+<td><a href="../file_timeseries/">file_timeseries</a></td>
+<td>0..* <br/> <a href="../TimeSeriesData/">TimeSeriesData</a></td>
+<td>Columnar timeseries data from a simulation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../file_visual/">file_visual</a></td>
+<td>0..* <br/> <a href="../ImageData/">ImageData</a></td>
 <td>Visualization output from a simulation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../fictive_time/">fictive_time</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>Maximum simulated (or "fictive") time reached</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -320,9 +336,11 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
-- csv_data
-- raw_data
-- viz_data
+- file_archive
+- file_spatial
+- file_timeseries
+- file_visual
+- fictive_time
 - hardware
 - memory_in_kb
 - time_in_s
@@ -337,45 +355,69 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 attributes:
-  csv_data:
-    name: csv_data
-    description: Tabular output from a simulation.
+  file_archive:
+    name: file_archive
+    description: Compressed data.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
-    alias: csv_data
+    alias: file_archive
     owner: Results
     domain_of:
     - Results
-    range: CsvFile
+    range: ArchiveData
     inlined: true
     inlined_as_list: true
-  raw_data:
-    name: raw_data
+  file_spatial:
+    name: file_spatial
     description: Raw data output from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
-    alias: raw_data
+    alias: file_spatial
     owner: Results
     domain_of:
     - Results
-    range: DataFile
+    range: FieldData
     inlined: true
     inlined_as_list: true
-  viz_data:
-    name: viz_data
+  file_timeseries:
+    name: file_timeseries
+    description: Columnar timeseries data from a simulation.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: true
+    alias: file_timeseries
+    owner: Results
+    domain_of:
+    - Results
+    range: TimeSeriesData
+    inlined: true
+    inlined_as_list: true
+  file_visual:
+    name: file_visual
     description: Visualization output from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
-    alias: viz_data
+    alias: file_visual
     owner: Results
     domain_of:
     - Results
-    range: VisualizationFile
+    range: ImageData
     inlined: true
     inlined_as_list: true
+  fictive_time:
+    name: fictive_time
+    description: Maximum simulated (or "fictive") time reached.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    slot_uri: https://schema.org/Number
+    alias: fictive_time
+    owner: Results
+    domain_of:
+    - Results
+    range: float
   hardware:
     name: hardware
     description: Computer hardware used to run the simulation.

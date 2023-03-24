@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/columns/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/CompressedFiles/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: columns - pfhub-schema</title>
+        <title>Enum: CompressedFiles - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-columns" class="md-skip">
+        <a href="#enum-compressedfiles" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: columns
+              Enum: CompressedFiles
             
           </span>
         </div>
@@ -256,15 +256,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applicable-classes" class="md-nav__link">
-    Applicable Classes
+  <a href="#permissible-values" class="md-nav__link">
+    Permissible Values
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#properties" class="md-nav__link">
-    Properties
+  <a href="#slots" class="md-nav__link">
+    Slots
   </a>
   
 </li>
@@ -310,18 +310,58 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/columns.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/CompressedFiles.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-columns">Slot: columns</h1>
-<p><em>Column names applied to tabular data.</em></p>
-<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/columns">pfhub:columns</a></p>
-<!-- no inheritance hierarchy -->
-
-<h2 id="applicable-classes">Applicable Classes</h2>
+<h1 id="enum-compressedfiles">Enum: CompressedFiles</h1>
+<p><em>Valid compressed archive file extensions.</em></p>
+<p>URI: <a href="CompressedFiles">CompressedFiles</a></p>
+<h2 id="permissible-values">Permissible Values</h2>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Meaning</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7z</td>
+<td>https://www.iana.org/assignments/media-types/application/x-7z-compressed</td>
+<td>7zip file extension</td>
+</tr>
+<tr>
+<td>bz2</td>
+<td>https://www.iana.org/assignments/media-types/application/x-bzip2</td>
+<td>Bzip-2 file extension</td>
+</tr>
+<tr>
+<td>gz</td>
+<td>https://www.iana.org/assignments/media-types/application/gzip</td>
+<td>GZip file extension</td>
+</tr>
+<tr>
+<td>tgz</td>
+<td>https://www.iana.org/assignments/media-types/application/x-gtar</td>
+<td>Shorthand tarball extension</td>
+</tr>
+<tr>
+<td>tar.gz</td>
+<td>https://www.iana.org/assignments/media-types/application/x-gtar</td>
+<td>Gzipped Tar extension</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>https://www.iana.org/assignments/media-types/application/zip</td>
+<td>Zip file extension</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
 <table>
 <thead>
 <tr>
@@ -331,16 +371,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../TimeSeriesData/">TimeSeriesData</a></td>
-<td>Specialization of a pfhub:File representing a time series in plain text using...</td>
+<td><a href="../format/">format</a></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<h2 id="properties">Properties</h2>
-<ul>
-<li>Range: <a href="../String/">String</a></li>
-<li>Multivalued: True</li>
-</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -349,18 +384,35 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: columns
-description: Column names applied to tabular data.
+<pre><code class="language-yaml">name: CompressedFiles
+description: Valid compressed archive file extensions.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-multivalued: true
-alias: columns
-domain_of:
-- TimeSeriesData
-range: string
-inlined: true
-inlined_as_list: true
-pattern: ^\S+
+permissible_values:
+  7z:
+    text: 7z
+    description: 7zip file extension.
+    meaning: https://www.iana.org/assignments/media-types/application/x-7z-compressed
+  bz2:
+    text: bz2
+    description: Bzip-2 file extension.
+    meaning: https://www.iana.org/assignments/media-types/application/x-bzip2
+  gz:
+    text: gz
+    description: GZip file extension.
+    meaning: https://www.iana.org/assignments/media-types/application/gzip
+  tgz:
+    text: tgz
+    description: Shorthand tarball extension.
+    meaning: https://www.iana.org/assignments/media-types/application/x-gtar
+  tar.gz:
+    text: tar.gz
+    description: Gzipped Tar extension.
+    meaning: https://www.iana.org/assignments/media-types/application/x-gtar
+  zip:
+    text: zip
+    description: Zip file extension.
+    meaning: https://www.iana.org/assignments/media-types/application/zip
 
 </code></pre>
 

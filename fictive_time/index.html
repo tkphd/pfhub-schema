@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/csv_data/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/fictive_time/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Slot: csv_data - pfhub-schema</title>
+        <title>Slot: fictive_time - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-csv_data" class="md-skip">
+        <a href="#slot-fictive_time" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: csv_data
+              Slot: fictive_time
             
           </span>
         </div>
@@ -310,15 +310,15 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/csv_data.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/fictive_time.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="slot-csv_data">Slot: csv_data</h1>
-<p><em>Tabular output from a simulation.</em></p>
-<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/csv_data">pfhub:csv_data</a></p>
+<h1 id="slot-fictive_time">Slot: fictive_time</h1>
+<p><em>Maximum simulated (or "fictive") time reached.</em></p>
+<p>URI: <a href="https://schema.org/Number">https://schema.org/Number</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -338,8 +338,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../CsvFile/">CsvFile</a></li>
-<li>Multivalued: True</li>
+<li>Range: <a href="../Float/">Float</a></li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
@@ -349,17 +348,15 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: csv_data
-description: Tabular output from a simulation.
+<pre><code class="language-yaml">name: fictive_time
+description: Maximum simulated (or &quot;fictive&quot;) time reached.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-multivalued: true
-alias: csv_data
+slot_uri: https://schema.org/Number
+alias: fictive_time
 domain_of:
 - Results
-range: CsvFile
-inlined: true
-inlined_as_list: true
+range: float
 
 </code></pre>
 
