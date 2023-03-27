@@ -212,11 +212,9 @@
       File &lt;|-- TimeSeriesData
 
       TimeSeriesData : columns
-        TimeSeriesData &lt;.. string : columns
-      TimeSeriesData : format
-        TimeSeriesData &lt;.. TabularFiles : format
+
       TimeSeriesData : name
-        TimeSeriesData &lt;.. string : name
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -247,12 +245,6 @@
 <td><a href="../name/">name</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Informal or human-memorable identifier that may collide with others</td>
-<td><a href="../File/">File</a></td>
-</tr>
-<tr>
-<td><a href="../format/">format</a></td>
-<td>0..1 <br/> <a href="../TabularFiles/">TabularFiles</a></td>
-<td>Format of data contained in a file</td>
 <td><a href="../File/">File</a></td>
 </tr>
 </tbody>
@@ -312,12 +304,6 @@ rank: 1000
 is_a: File
 slots:
 - columns
-slot_usage:
-  format:
-    name: format
-    domain_of:
-    - File
-    range: TabularFiles
 class_uri: https://en.wikipedia.org/wiki/Comma-separated_values
 
 </code></pre>
@@ -330,12 +316,6 @@ description: Specialization of a pfhub:File representing a time series in plain 
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 is_a: File
-slot_usage:
-  format:
-    name: format
-    domain_of:
-    - File
-    range: TabularFiles
 attributes:
   columns:
     name: columns
@@ -367,17 +347,6 @@ attributes:
     - Software
     - SourceCode
     range: string
-  format:
-    name: format
-    description: Format of data contained in a file.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: https://schema.org/encodingFormat
-    alias: format
-    owner: TimeSeriesData
-    domain_of:
-    - File
-    range: TabularFiles
 class_uri: https://en.wikipedia.org/wiki/Comma-separated_values
 
 </code></pre>

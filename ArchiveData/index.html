@@ -211,10 +211,8 @@
     class ArchiveData
       File &lt;|-- ArchiveData
 
-      ArchiveData : format
-        ArchiveData &lt;.. CompressedFiles : format
       ArchiveData : name
-        ArchiveData &lt;.. string : name
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -239,12 +237,6 @@
 <td><a href="../name/">name</a></td>
 <td>1..1 <br/> <a href="../String/">String</a></td>
 <td>Informal or human-memorable identifier that may collide with others</td>
-<td><a href="../File/">File</a></td>
-</tr>
-<tr>
-<td><a href="../format/">format</a></td>
-<td>0..1 <br/> <a href="../CompressedFiles/">CompressedFiles</a></td>
-<td>Format of data contained in a file</td>
 <td><a href="../File/">File</a></td>
 </tr>
 </tbody>
@@ -301,12 +293,6 @@ description: Specialization of a pfhub:File containing a compressed data archive
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 is_a: File
-slot_usage:
-  format:
-    name: format
-    domain_of:
-    - File
-    range: CompressedFiles
 
 </code></pre>
 </details>
@@ -317,12 +303,6 @@ description: Specialization of a pfhub:File containing a compressed data archive
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 is_a: File
-slot_usage:
-  format:
-    name: format
-    domain_of:
-    - File
-    range: CompressedFiles
 attributes:
   name:
     name: name
@@ -340,17 +320,6 @@ attributes:
     - Software
     - SourceCode
     range: string
-  format:
-    name: format
-    description: Format of data contained in a file.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: https://schema.org/encodingFormat
-    alias: format
-    owner: ArchiveData
-    domain_of:
-    - File
-    range: CompressedFiles
 
 </code></pre>
 </details>

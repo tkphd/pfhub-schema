@@ -204,22 +204,36 @@
 <p>URI: <a href="https://schema.org/Dataset">https://schema.org/Dataset</a></p>
 <div class="mermaid"> classDiagram
     class Results
+      Results : documentation
+
+          Results ..&gt; TextFile : documentation
+
       Results : fictive_time
-        Results &lt;.. float : fictive_time
+
       Results : file_archive
-        Results &lt;.. ArchiveData : file_archive
+
+          Results ..&gt; ArchiveData : file_archive
+
       Results : file_spatial
-        Results &lt;.. FieldData : file_spatial
+
+          Results ..&gt; FieldData : file_spatial
+
       Results : file_timeseries
-        Results &lt;.. TimeSeriesData : file_timeseries
+
+          Results ..&gt; TimeSeriesData : file_timeseries
+
       Results : file_visual
-        Results &lt;.. ImageData : file_visual
+
+          Results ..&gt; ImageData : file_visual
+
       Results : hardware
-        Results &lt;.. ComputeResource : hardware
+
+          Results ..&gt; ComputeResource : hardware
+
       Results : memory_in_kb
-        Results &lt;.. integer : memory_in_kb
+
       Results : time_in_s
-        Results &lt;.. integer : time_in_s
+
 
 </div>
 <!-- no inheritance hierarchy -->
@@ -235,27 +249,33 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../documentation/">documentation</a></td>
+<td>0..* <br/> <a href="../TextFile/">TextFile</a></td>
+<td>README, AUTHORS, and similar documentation</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../file_archive/">file_archive</a></td>
 <td>0..* <br/> <a href="../ArchiveData/">ArchiveData</a></td>
-<td>Compressed data</td>
+<td>Compressed data files</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../file_spatial/">file_spatial</a></td>
 <td>0..* <br/> <a href="../FieldData/">FieldData</a></td>
-<td>Raw data output from a simulation</td>
+<td>Raw data files from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../file_timeseries/">file_timeseries</a></td>
 <td>0..* <br/> <a href="../TimeSeriesData/">TimeSeriesData</a></td>
-<td>Columnar timeseries data from a simulation</td>
+<td>Columnar timeseries files from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
 <td><a href="../file_visual/">file_visual</a></td>
 <td>0..* <br/> <a href="../ImageData/">ImageData</a></td>
-<td>Visualization output from a simulation</td>
+<td>Visualization output files from a simulation</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -336,6 +356,7 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 slots:
+- documentation
 - file_archive
 - file_spatial
 - file_timeseries
@@ -355,9 +376,22 @@ description: Runtime information and output from a simulation.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 attributes:
+  documentation:
+    name: documentation
+    description: README, AUTHORS, and similar documentation.
+    from_schema: https://w3id.org/usnistgov/pfhub-schema
+    rank: 1000
+    multivalued: true
+    alias: documentation
+    owner: Results
+    domain_of:
+    - Results
+    range: TextFile
+    inlined: true
+    inlined_as_list: true
   file_archive:
     name: file_archive
-    description: Compressed data.
+    description: Compressed data files.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
@@ -370,7 +404,7 @@ attributes:
     inlined_as_list: true
   file_spatial:
     name: file_spatial
-    description: Raw data output from a simulation.
+    description: Raw data files from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
@@ -383,7 +417,7 @@ attributes:
     inlined_as_list: true
   file_timeseries:
     name: file_timeseries
-    description: Columnar timeseries data from a simulation.
+    description: Columnar timeseries files from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true
@@ -396,7 +430,7 @@ attributes:
     inlined_as_list: true
   file_visual:
     name: file_visual
-    description: Visualization output from a simulation.
+    description: Visualization output files from a simulation.
     from_schema: https://w3id.org/usnistgov/pfhub-schema
     rank: 1000
     multivalued: true

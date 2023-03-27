@@ -209,13 +209,12 @@
     class File
       File &lt;|-- ArchiveData
       File &lt;|-- FieldData
+      File &lt;|-- TextFile
       File &lt;|-- TimeSeriesData
       File &lt;|-- ImageData
 
-      File : format
-        File &lt;.. string : format
       File : name
-        File &lt;.. string : name
+
 
 </div>
 <h2 id="inheritance">Inheritance</h2>
@@ -223,6 +222,7 @@
 <li><strong>File</strong><ul>
 <li><a href="../ArchiveData/">ArchiveData</a></li>
 <li><a href="../FieldData/">FieldData</a></li>
+<li><a href="../TextFile/">TextFile</a></li>
 <li><a href="../TimeSeriesData/">TimeSeriesData</a></li>
 <li><a href="../ImageData/">ImageData</a></li>
 </ul>
@@ -243,12 +243,6 @@
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>Informal or human-memorable identifier that may collide with others</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../format/">format</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Format of data contained in a file</td>
 <td>direct</td>
 </tr>
 </tbody>
@@ -288,7 +282,6 @@ rank: 1000
 abstract: true
 slots:
 - name
-- format
 slot_usage:
   name:
     name: name
@@ -334,17 +327,6 @@ attributes:
     - File
     - Software
     - SourceCode
-    range: string
-  format:
-    name: format
-    description: Format of data contained in a file.
-    from_schema: https://w3id.org/usnistgov/pfhub-schema
-    rank: 1000
-    slot_uri: https://schema.org/encodingFormat
-    alias: format
-    owner: File
-    domain_of:
-    - File
     range: string
 class_uri: https://schema.org/DigitalDocument
 

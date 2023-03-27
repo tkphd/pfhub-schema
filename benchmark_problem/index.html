@@ -317,7 +317,7 @@
 
 
 <h1 id="slot-benchmark_problem">Slot: benchmark_problem</h1>
-<p><em>Alphanumerical identifier for part of a Benchmark Problem.</em></p>
+<p><em>Specification of the PFHub Benchmark Problem solved.</em></p>
 <p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/benchmark_problem">pfhub:benchmark_problem</a></p>
 <!-- no inheritance hierarchy -->
 
@@ -338,7 +338,7 @@
 </table>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Range: <a href="../ValidBenchmarkProblem/">ValidBenchmarkProblem</a></li>
+<li>Range: <a href="../ValidBenchmarkProblems/">ValidBenchmarkProblems</a></li>
 <li>Required: True</li>
 </ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -350,16 +350,16 @@
 <details>
 
 <pre><code class="language-yaml">name: benchmark_problem
-description: Alphanumerical identifier for part of a Benchmark Problem.
+description: Specification of the PFHub Benchmark Problem solved.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
 multivalued: false
 alias: benchmark_problem
 domain_of:
 - BenchmarkResult
-range: ValidBenchmarkProblem
+range: ValidBenchmarkProblems
 required: true
-pattern: ^\d\a
+pattern: ^\S+
 
 </code></pre>
 

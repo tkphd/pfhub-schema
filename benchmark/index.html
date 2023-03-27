@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/DataFiles/">
+        <link rel="canonical" href="https://tkphd.github.io/pfhub-schema/benchmark/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Enum: DataFiles - pfhub-schema</title>
+        <title>Slot: benchmark - pfhub-schema</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enum-datafiles" class="md-skip">
+        <a href="#slot-benchmark" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enum: DataFiles
+              Slot: benchmark
             
           </span>
         </div>
@@ -256,8 +256,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#permissible-values" class="md-nav__link">
-    Permissible Values
+  <a href="#applicable-classes" class="md-nav__link">
+    Applicable Classes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
   </a>
   
 </li>
@@ -303,87 +310,37 @@
                 
                   
 
-  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/DataFiles.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/tkphd/pfhub-schema/edit/master/docs/benchmark.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="enum-datafiles">Enum: DataFiles</h1>
-<p><em>Valid raw or transformed spatial phase-field data file extensions.</em></p>
-<p>URI: <a href="DataFiles">DataFiles</a></p>
-<h2 id="permissible-values">Permissible Values</h2>
+<h1 id="slot-benchmark">Slot: benchmark</h1>
+<p><em>Alphanumerical identifier for part of a Benchmark Problem.</em></p>
+<p>URI: <a href="https://w3id.org/usnistgov/pfhub-schema/benchmark">pfhub:benchmark</a></p>
+<!-- no inheritance hierarchy -->
+
+<h2 id="applicable-classes">Applicable Classes</h2>
 <table>
 <thead>
 <tr>
-<th>Value</th>
-<th>Meaning</th>
+<th>Name</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>csv</td>
-<td>https://www.iana.org/assignments/media-types/text/csv</td>
-<td>Comma-separated values</td>
-</tr>
-<tr>
-<td>hdf5</td>
-<td>https://docs.hdfgroup.org/hdf5/develop/_intro_h_d_f5.html</td>
-<td>Hierarchical HDF5 data</td>
-</tr>
-<tr>
-<td>pvti</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkImageData.html#details</td>
-<td>Parallel VTK ImageData file</td>
-</tr>
-<tr>
-<td>pvtr</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkRectilinearGrid.html#details</td>
-<td>Parallel VTK RectilinearGrid file</td>
-</tr>
-<tr>
-<td>pvts</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html#details</td>
-<td>Parallel VTK StructuredGrid file</td>
-</tr>
-<tr>
-<td>pvtu</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html#details</td>
-<td>Parallel VTK UnstructuredGrid file</td>
-</tr>
-<tr>
-<td>tsv</td>
-<td>https://www.iana.org/assignments/media-types/text/tsv</td>
-<td>Tab-delimited values</td>
-</tr>
-<tr>
-<td>vti</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkImageData.html#details</td>
-<td>VTK ImageData file</td>
-</tr>
-<tr>
-<td>vtr</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkRectilinearGrid.html#details</td>
-<td>VTK RectilinearGrid file</td>
-</tr>
-<tr>
-<td>vts</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.htmOAl#details</td>
-<td>VTK StructuredGrid file</td>
-</tr>
-<tr>
-<td>vtu</td>
-<td>https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html#details</td>
-<td>VTK UnstructuredGrid file</td>
-</tr>
-<tr>
-<td>xdmf</td>
-<td>https://www.xdmf.org/index.php/XDMF_Model_and_Format</td>
-<td>XML summary with HDF5 data</td>
+<td><a href="../BenchmarkResult/">BenchmarkResult</a></td>
+<td>Root and context for this Benchmark Problem solution</td>
 </tr>
 </tbody>
 </table>
+<h2 id="properties">Properties</h2>
+<ul>
+<li>Range: <a href="../ValidBenchmarkVersion/">ValidBenchmarkVersion</a></li>
+<li>Required: True</li>
+</ul>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
@@ -392,59 +349,16 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 
-<pre><code class="language-yaml">name: DataFiles
-description: Valid raw or transformed spatial phase-field data file extensions.
+<pre><code class="language-yaml">name: benchmark
+description: Alphanumerical identifier for part of a Benchmark Problem.
 from_schema: https://w3id.org/usnistgov/pfhub-schema
 rank: 1000
-permissible_values:
-  csv:
-    text: csv
-    description: Comma-separated values.
-    meaning: https://www.iana.org/assignments/media-types/text/csv
-  hdf5:
-    text: hdf5
-    description: Hierarchical HDF5 data.
-    meaning: https://docs.hdfgroup.org/hdf5/develop/_intro_h_d_f5.html
-  pvti:
-    text: pvti
-    description: Parallel VTK ImageData file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkImageData.html#details
-  pvtr:
-    text: pvtr
-    description: Parallel VTK RectilinearGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkRectilinearGrid.html#details
-  pvts:
-    text: pvts
-    description: Parallel VTK StructuredGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html#details
-  pvtu:
-    text: pvtu
-    description: Parallel VTK UnstructuredGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html#details
-  tsv:
-    text: tsv
-    description: Tab-delimited values.
-    meaning: https://www.iana.org/assignments/media-types/text/tsv
-  vti:
-    text: vti
-    description: VTK ImageData file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkImageData.html#details
-  vtr:
-    text: vtr
-    description: VTK RectilinearGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkRectilinearGrid.html#details
-  vts:
-    text: vts
-    description: VTK StructuredGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.htmOAl#details
-  vtu:
-    text: vtu
-    description: VTK UnstructuredGrid file.
-    meaning: https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html#details
-  xdmf:
-    text: xdmf
-    description: XML summary with HDF5 data.
-    meaning: https://www.xdmf.org/index.php/XDMF_Model_and_Format
+multivalued: false
+alias: benchmark
+domain_of:
+- BenchmarkResult
+range: ValidBenchmarkVersion
+required: true
 
 </code></pre>
 

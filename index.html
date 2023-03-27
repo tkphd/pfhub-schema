@@ -433,6 +433,10 @@ Name: pfhub_schema</p>
 <td>Link to the authors' implementation of the benchmark problem</td>
 </tr>
 <tr>
+<td><a href="TextFile/">TextFile</a></td>
+<td>Specialization of a pfhub:File containing plain text</td>
+</tr>
+<tr>
 <td><a href="TimeSeriesData/">TimeSeriesData</a></td>
 <td>Specialization of a pfhub:File representing a time series in plain text using...</td>
 </tr>
@@ -457,11 +461,7 @@ Name: pfhub_schema</p>
 </tr>
 <tr>
 <td><a href="benchmark_problem/">benchmark_problem</a></td>
-<td>Alphanumerical identifier for part of a Benchmark Problem</td>
-</tr>
-<tr>
-<td><a href="benchmark_version/">benchmark_version</a></td>
-<td>Numerical identifier for a Benchmark Problem version</td>
+<td>Specification of the PFHub Benchmark Problem solved</td>
 </tr>
 <tr>
 <td><a href="columns/">columns</a></td>
@@ -484,6 +484,10 @@ Name: pfhub_schema</p>
 <td>Day when an item was uploaded, released, or published</td>
 </tr>
 <tr>
+<td><a href="documentation/">documentation</a></td>
+<td>README, AUTHORS, and similar documentation</td>
+</tr>
+<tr>
 <td><a href="download/">download</a></td>
 <td>Link to a download URL</td>
 </tr>
@@ -497,19 +501,19 @@ Name: pfhub_schema</p>
 </tr>
 <tr>
 <td><a href="file_archive/">file_archive</a></td>
-<td>Compressed data</td>
+<td>Compressed data files</td>
 </tr>
 <tr>
 <td><a href="file_spatial/">file_spatial</a></td>
-<td>Raw data output from a simulation</td>
+<td>Raw data files from a simulation</td>
 </tr>
 <tr>
 <td><a href="file_timeseries/">file_timeseries</a></td>
-<td>Columnar timeseries data from a simulation</td>
+<td>Columnar timeseries files from a simulation</td>
 </tr>
 <tr>
 <td><a href="file_visual/">file_visual</a></td>
-<td>Visualization output from a simulation</td>
+<td>Visualization output files from a simulation</td>
 </tr>
 <tr>
 <td><a href="format/">format</a></td>
@@ -517,7 +521,7 @@ Name: pfhub_schema</p>
 </tr>
 <tr>
 <td><a href="framework/">framework</a></td>
-<td>A computer program or library</td>
+<td>List of the primary phase-field software framework and extra dependencies req...</td>
 </tr>
 <tr>
 <td><a href="handle/">handle</a></td>
@@ -583,28 +587,8 @@ Name: pfhub_schema</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="CompressedFiles/">CompressedFiles</a></td>
-<td>Valid compressed archive file extensions</td>
-</tr>
-<tr>
-<td><a href="DataFiles/">DataFiles</a></td>
-<td>Valid raw or transformed spatial phase-field data file extensions</td>
-</tr>
-<tr>
-<td><a href="ImageFiles/">ImageFiles</a></td>
-<td>Valid image and visualization file extensions</td>
-</tr>
-<tr>
-<td><a href="TabularFiles/">TabularFiles</a></td>
-<td>Valid tabular file extensions</td>
-</tr>
-<tr>
-<td><a href="ValidBenchmarkProblem/">ValidBenchmarkProblem</a></td>
+<td><a href="ValidBenchmarkProblems/">ValidBenchmarkProblems</a></td>
 <td>Known parts of the accepted PFHub Benchmark Problems</td>
-</tr>
-<tr>
-<td><a href="ValidBenchmarkVersion/">ValidBenchmarkVersion</a></td>
-<td>Known versions of the accepted PFHub Benchmark Problems</td>
 </tr>
 </tbody>
 </table>
@@ -620,6 +604,10 @@ Name: pfhub_schema</p>
 <tr>
 <td><a href="Boolean/">Boolean</a></td>
 <td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie/">Curie</a></td>
+<td>a compact URI</td>
 </tr>
 <tr>
 <td><a href="Date/">Date</a></td>
